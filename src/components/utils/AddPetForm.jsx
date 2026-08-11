@@ -50,11 +50,11 @@ const AddPetForm = () => {
                 <Form onSubmit={handleSubmit}>
                     <Fieldset className="space-y-8">
                         <div className="space-y-2">
-                            <Fieldset.Legend className="text-3xl font-bold text-[#1E3A2F]">
+                            <Fieldset.Legend className="text-3xl font-bold text-primary-800">
                                 Add New Pet
                             </Fieldset.Legend>
 
-                            <Description className="text-sm text-[#8b7355]">
+                            <Description className="text-sm text-earth-500">
                                 Fill in the details below to publish your pet for adoption.
                             </Description>
                         </div>
@@ -64,24 +64,24 @@ const AddPetForm = () => {
                             {/* Row 1 */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <TextField>
-                                    <Label className='text-[#5c4a32]'>Pet Name*</Label>
+                                    <Label className='text-earth-800'>Pet Name*</Label>
                                     <Input
                                         required
                                         name='petName'
                                         variant='secondary'
                                         placeholder="Enter pet name"
-                                        className='bg-[#E8DFC8]'
+                                        className='bg-earth-300'
                                     />
                                     <FieldError />
                                 </TextField>
 
                                 <TextField>
-                                    <Label className='text-[#5c4a32]'>Breed*</Label>
+                                    <Label className='text-earth-800'>Breed*</Label>
                                     <Input
                                         required
                                         name='breed'
                                         placeholder="Golden Retriever"
-                                        className='bg-[#E8DFC8]'
+                                        className='bg-earth-300'
                                     />
                                     <FieldError />
                                 </TextField>
@@ -90,9 +90,9 @@ const AddPetForm = () => {
                             {/* Row 2 */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
                                 <Select name='species' className="w-full" placeholder="Select Category" required>
-                                    <Label className='text-[#5c4a32] text-sm'>Species*</Label>
+                                    <Label className='text-earth-800 text-sm'>Species*</Label>
 
-                                    <Select.Trigger className='bg-[#E8DFC8]'>
+                                    <Select.Trigger className='bg-earth-300'>
                                         <Select.Value />
                                         <Select.Indicator />
                                     </Select.Trigger>
@@ -124,13 +124,13 @@ const AddPetForm = () => {
                                 </Select>
 
                                 <TextField>
-                                    <Label className='text-[#5c4a32]'>Location*</Label>
+                                    <Label className='text-earth-800'>Location*</Label>
                                     <Input
                                         required
                                         name='location'
                                         placeholder="Dhaka"
 
-                                        className='bg-[#E8DFC8]'
+                                        className='bg-earth-300'
                                     />
                                     <FieldError />
                                 </TextField>
@@ -139,45 +139,45 @@ const AddPetForm = () => {
                             {/* Row 3 */}
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                 <TextField>
-                                    <Label className='text-[#5c4a32]'>Age*</Label>
+                                    <Label className='text-earth-800'>Age*</Label>
                                     <Input
                                         required
                                         name='age'
                                         placeholder="2 Years"
 
-                                        className='bg-[#E8DFC8]'
+                                        className='bg-earth-300'
                                     />
                                     <FieldError />
                                 </TextField>
 
                                 <TextField>
-                                    <Label className='text-[#5c4a32]'>Gender*</Label>
+                                    <Label className='text-earth-800'>Gender*</Label>
                                     <Input
                                         required
                                         name='gender'
                                         placeholder="Male"
 
-                                        className='bg-[#E8DFC8]'
+                                        className='bg-earth-300'
                                     />
                                     <FieldError />
                                 </TextField>
 
                                 <TextField>
-                                    <Label className='text-[#5c4a32]'>Adoption Fee*</Label>
+                                    <Label className='text-earth-800'>Adoption Fee*</Label>
                                     <Input
                                         required
                                         name='adoptionFee'
                                         placeholder="$50"
 
-                                        className='bg-[#E8DFC8]'
+                                        className='bg-earth-300'
                                     />
                                     <FieldError />
                                 </TextField>
                             </div>
                             <div className="space-y-2">
-                                <Label className="text-[#5c4a32]">Personality*</Label>
+                                <Label className="text-earth-800">Personality*</Label>
 
-                                <div className="grid grid-cols-2 gap-3 rounded-xl bg-[#E8DFC8] p-4">
+                                <div className="grid grid-cols-2 gap-3 rounded-xl bg-earth-300 p-4">
 
                                     {personalities.map((item, index) => (
                                         <label
@@ -189,7 +189,7 @@ const AddPetForm = () => {
                                                 type="checkbox"
                                                 name="personality"
                                                 value={item.label}
-                                                className="checkbox checked:border-[#1E3A2F] checked:bg-[#1E3A2F] checked:text-[#E8892B]"
+                                                className="checkbox checked:border-primary-800 checked:bg-primary-800 checked:text-secondary-500"
                                             />
 
                                             <span>{item.label}</span>
@@ -200,9 +200,9 @@ const AddPetForm = () => {
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <Select name='healthStatus' className="w-full" placeholder="Select Category" required>
-                                    <Label className='text-[#5c4a32] text-sm'>Health Status*</Label>
+                                    <Label className='text-earth-800 text-sm'>Health Status*</Label>
 
-                                    <Select.Trigger className='bg-[#E8DFC8]'>
+                                    <Select.Trigger className='bg-earth-300'>
                                         <Select.Value />
                                         <Select.Indicator />
                                     </Select.Trigger>
@@ -237,9 +237,9 @@ const AddPetForm = () => {
                                     <FieldError />
                                 </Select>
                                 <Select name='vaccinationStatus' className="w-full" placeholder="Select Category" required>
-                                    <Label className='text-[#5c4a32] text-sm'>Vaccination Status*</Label>
+                                    <Label className='text-earth-800 text-sm'>Vaccination Status*</Label>
 
-                                    <Select.Trigger className='bg-[#E8DFC8]'>
+                                    <Select.Trigger className='bg-earth-300'>
                                         <Select.Value />
                                         <Select.Indicator />
                                     </Select.Trigger>
@@ -276,25 +276,25 @@ const AddPetForm = () => {
 
                             </div>
                             <TextField>
-                                <Label className='text-[#5c4a32]'>Pet Image URL*</Label>
+                                <Label className='text-earth-800'>Pet Image URL*</Label>
                                 <Input
                                     required
                                     name='imageUrl'
                                     type='url'
                                     placeholder="Paste Your Pet Image URL"
 
-                                    className='bg-[#E8DFC8]'
+                                    className='bg-earth-300'
                                 />
                                 <FieldError />
                             </TextField>
 
                             {/* Description */}
                             <TextField>
-                                <Label className='text-[#5c4a32]'>Description*</Label>
+                                <Label className='text-earth-800'>Description*</Label>
                                 <textarea
                                     required
                                     name='description'
-                                    className="textarea textarea-bordered h-32 w-full rounded-2xl bg-[#E8DFC8]"
+                                    className="textarea textarea-bordered h-32 w-full rounded-2xl bg-earth-300"
                                     placeholder="Tell adopters about this pet..."
                                 />
                                 <FieldError />
@@ -305,7 +305,7 @@ const AddPetForm = () => {
                         <Fieldset.Actions className="pt-4">
                             <Button
                                 type="submit"
-                                className="w-full h-14 rounded-2xl bg-linear-to-r from-[#C4711A] via-[#D87B21] to-[#E8892B] text-white text-base font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 ease-out disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                                className="w-full h-14 rounded-2xl bg-linear-to-r from-secondary-700 via-[#D87B21] to-secondary-500 text-white text-base font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 ease-out disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                             >
                                 <FloppyDisk className="w-5 h-5" />
                                 <span>Publish Pet for Adoption</span>

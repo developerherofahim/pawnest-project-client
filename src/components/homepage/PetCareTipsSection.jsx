@@ -58,7 +58,7 @@ const tips = [
 
 export default function PetCareTipsSection() {
     return (
-        <section className="bg-[#F7F2E8] py-24">
+        <section className="bg-secondary-100 py-24">
 
             <div className="container mx-auto px-4">
 
@@ -66,11 +66,11 @@ export default function PetCareTipsSection() {
 
                 <div className="mx-auto mb-16 max-w-3xl text-center">
 
-                    <span className={`${dmSans.className} text-[12px] text-[#C4711A] tracking-widest`}>
+                    <span className={`${dmSans.className} text-[12px] text-secondary-700 tracking-widest`}>
                         Pet Care Guide
                     </span>
 
-                    <h2 className={`${playFairDisplay.className} text-4xl font-semibold text-[#1E3A2F] mt-5`}>
+                    <h2 className={`${playFairDisplay.className} text-4xl font-semibold text-primary-800 mt-5`}>
                         Helpful Tips for Happy & Healthy Pets
                     </h2>
 
@@ -99,26 +99,26 @@ export default function PetCareTipsSection() {
 
                             <div className="flex items-center justify-between">
 
-                                <span className="rounded-full bg-[#C4711A]/10 px-3 py-1 text-sm font-semibold text-[#C4711A]">
+                                <span className="rounded-full bg-secondary-700/10 px-3 py-1 text-sm font-semibold text-secondery-700">
                                     {tips[0].category}
                                 </span>
 
-                                <div className="flex items-center gap-2 text-sm text-[#8B7355]">
+                                <div className="flex items-center gap-2 text-sm text-earth-500">
                                     <Clock3 size={16} />
                                     {tips[0].readTime}
                                 </div>
 
                             </div>
 
-                            <h3 className="text-3xl font-bold text-[#1E3A2F]">
+                            <h3 className="text-3xl font-bold text-primary-800">
                                 {tips[0].title}
                             </h3>
 
-                            <p className="leading-8 text-[#6B5B47]">
+                            <p className="leading-8 text-earth-600">
                                 {tips[0].description}
                             </p>
 
-                            <button className="inline-flex items-center gap-2 font-semibold text-[#1E3A2F] transition hover:text-[#C4711A]">
+                            <button className="inline-flex items-center gap-2 font-semibold text-primary-800 transition hover:text-secondery-700">
                                 Read Article
                                 <ArrowRight size={18} />
                             </button>
@@ -157,17 +157,17 @@ export default function PetCareTipsSection() {
 
                                             <div className="mb-3 flex items-center gap-2">
 
-                                                <div className="rounded-xl bg-[#1E3A2F]/10 p-2 text-[#1E3A2F]">
+                                                <div className="rounded-xl bg-primary-800/10 p-2 text-primary-800">
                                                     <Icon size={18} />
                                                 </div>
 
-                                                <span className="text-sm font-semibold text-[#C4711A]">
+                                                <span className="text-sm font-semibold text-secondary-700">
                                                     {tip.category}
                                                 </span>
 
                                             </div>
 
-                                            <h3 className="text-xl font-bold text-[#1E3A2F]">
+                                            <h3 className="text-xl font-bold text-primary-800">
                                                 {tip.title}
                                             </h3>
 
@@ -175,12 +175,12 @@ export default function PetCareTipsSection() {
 
                                         <div className="mt-4 flex items-center justify-between">
 
-                                            <div className="flex items-center gap-2 text-sm text-[#8B7355]">
+                                            <div className="flex items-center gap-2 text-sm text-earth-500">
                                                 <Clock3 size={15} />
                                                 {tip.readTime}
                                             </div>
 
-                                            <button className="inline-flex items-center gap-2 font-medium text-[#1E3A2F] transition hover:text-[#C4711A]">
+                                            <button className="inline-flex items-center gap-2 font-medium text-primary-800 transition hover:text-secondary-700">
                                                 Read
                                                 <ArrowRight size={16} />
                                             </button>

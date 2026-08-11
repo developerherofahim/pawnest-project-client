@@ -17,10 +17,10 @@ const HeroImageSection = () => {
         border
         border-[#F4D8AE]
         shadow-[0_0_20px_rgba(244,216,174,.40)]
-        sm:h-[420px]
-        sm:w-[420px]
-        lg:h-[560px]
-        lg:w-[560px]
+        sm:h-105
+        sm:w-105
+        lg:h-140
+        lg:w-140
         rotate-ring
         ring-glow
       "
@@ -36,10 +36,10 @@ const HeroImageSection = () => {
         border-dashed
         border-[#E7CCA3]
         shadow-[0_0_20px_rgba(231,204,163,.45)]
-        sm:h-[340px]
-        sm:w-[340px]
-        lg:h-[450px]
-        lg:w-[450px]
+        sm:h-85
+        sm:w-85
+        lg:h-112.5
+        lg:w-112.5
         rotate-ring
         ring-glow
       "
@@ -49,15 +49,15 @@ const HeroImageSection = () => {
       <div
         className="
         absolute
-        h-[170px] w-[170px]
+        h-42.5 w-42.5
         rounded-full
         border
         border-[#F5E7D4]
         shadow-[0_0_20px_rgba(245,231,212,.7)]
-        sm:h-[260px]
-        sm:w-[260px]
-        lg:h-[340px]
-        lg:w-[340px]
+        sm:h-65
+        sm:w-65
+        lg:h-85
+        lg:w-85
         rotate-ring
         ring-glow
       "
@@ -81,11 +81,11 @@ const HeroImageSection = () => {
       />
 
       {/* Paw */}
-      <div className="absolute left-6 top-10 hidden text-4xl text-[#E8D2B4] opacity-60 lg:block">
+      <div className="absolute left-6 top-10 hidden text-4xl text-earth-400 opacity-60 lg:block">
         🐾
       </div>
 
-      <div className="absolute right-8 bottom-20 hidden text-4xl text-[#E8D2B4] opacity-60 lg:block">
+      <div className="absolute right-8 bottom-20 hidden text-4xl text-earth-400 opacity-60 lg:block">
         🐾
       </div>
     </div>

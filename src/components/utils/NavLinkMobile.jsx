@@ -38,8 +38,8 @@ const NavLinkMobile = () => {
                                 className={`rounded-xl px-4 py-3 transition-all duration-300
 
                       ${pathname === item.href
-                                        ? "bg-[#3D6B57] text-white"
-                                        : "text-[#1E3A2F] hover:bg-[#F7F2E8]"
+                                        ? "bg-primary-500 text-white"
+                                        : "text-primary-800 hover:bg-secondary-100"
                                     }`}
                             >
                                 {item.name}

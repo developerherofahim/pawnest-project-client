@@ -9,7 +9,7 @@ import LoginForm from "./LogInForm";
 export default function AuthLayout() {
   return (
     <section
-      className={`${dmSans.className} min-h-screen bg-[#F7F2E8]`}
+      className={`${dmSans.className} min-h-screen bg-secondary-100`}
     >
       <div className="grid min-h-screen lg:grid-cols-2">
 
@@ -23,11 +23,11 @@ export default function AuthLayout() {
 
           {/* Background */}
 
-          <div className="absolute inset-0 bg-linear-to-br from-[#173328] via-[#1E3A2F] to-[#3D6B57] opacity-85" />
+          <div className="absolute inset-0 bg-linear-to-br from- via-primary-800 to-primary-500 opacity-85" />
 
           {/* Decorative Blur */}
 
-          <div className="absolute -left-24 -top-20 h-80 w-80 rounded-full bg-[#C4711A]/20 blur-3xl" />
+          <div className="absolute -left-24 -top-20 h-80 w-80 rounded-full bg-secondary-700/20 blur-3xl" />
 
           <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
 

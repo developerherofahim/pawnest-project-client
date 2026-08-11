@@ -47,7 +47,7 @@ export default function DropDown() {
                 <ChevronDown className="text-emerald-700" />
             </Button>
 
-            <Dropdown.Popover className="m-4 min-w-56 rounded-2xl border border-emerald-100 bg-[#173328] p-2 shadow-2xl backdrop-blur-xl">
+            <Dropdown.Popover className="m-4 min-w-56 rounded-2xl border border-emerald-100 bg-primary-900 p-2 shadow-2xl backdrop-blur-xl">
                 <Dropdown.Menu aria-label="Profile Actions">
                     {dropDownItems.map((item) => {
                         const active = item.href && pathname === item.href;

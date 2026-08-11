@@ -47,11 +47,11 @@ export default function AdoptProcessSection() {
 
                 <div className="mx-auto mb-15 max-w-3xl text-center">
 
-                    <span className={`${dmSans.className} text-[12px] text-[#C4711A] tracking-widest`}>
+                    <span className={`${dmSans.className} text-[12px] text-secondery-700 tracking-widest`}>
                         Adoption Process
                     </span>
 
-                    <h2 className={`${playFairDisplay.className} text-[#1E3A2F] text-4xl font-semibold mt-5`}>
+                    <h2 className={`${playFairDisplay.className} text-primary-800 text-4xl font-semibold mt-5`}>
                         Adopt Your Perfect Companion
                     </h2>
 
@@ -78,7 +78,7 @@ export default function AdoptProcessSection() {
 
                                 {/* Icon */}
 
-                                <div className="relative z-10 mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-linear-to-br from-[#1E3A2F] to-[#3D6B57] text-white shadow-lg transition-transform duration-300 group-hover:scale-110">
+                                <div className="relative z-10 mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-linear-to-br from-primary-800 to-primary-500 text-white shadow-lg transition-transform duration-300 group-hover:scale-110">
 
                                     <Icon size={30} />
 
@@ -86,13 +86,13 @@ export default function AdoptProcessSection() {
 
                                 {/* Title */}
 
-                                <h3 className={`${playFairDisplay.className} mb-4 text-2xl font-bold text-[#1E3A2F]`}>
+                                <h3 className={`${playFairDisplay.className} mb-4 text-2xl font-bold text-primary-800`}>
                                     {step.title}
                                 </h3>
 
                                 {/* Description */}
 
-                                <p className={`${dmSans.className} leading-7 text-[#6B5B47]`}>
+                                <p className={`${dmSans.className} leading-7 text-earth-600`}>
                                     {step.description}
                                 </p>
 

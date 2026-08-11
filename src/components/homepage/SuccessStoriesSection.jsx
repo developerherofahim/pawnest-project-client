@@ -48,11 +48,11 @@ export default function SuccessStoriesSection() {
 
         <div className="mx-auto mb-16 max-w-3xl text-center">
 
-          <span className={`${dmSans.className} text-[12px] text-[#C4711A] tracking-widest`}>
+          <span className={`${dmSans.className} text-[12px] text-secondary-700 tracking-widest`}>
             Happy Tails
           </span>
 
-          <h2 className={`${playFairDisplay.className} text-4xl font-semibold text-[#1E3A2F] mt-5`}>
+          <h2 className={`${playFairDisplay.className} text-4xl font-semibold text-primary-800 mt-5`}>
             Success Stories from Our Community
           </h2>
 
@@ -65,7 +65,7 @@ export default function SuccessStoriesSection() {
           {stories.map((story) => (
             <article
               key={story.id}
-              className="group overflow-hidden rounded-3xl border border-[#E7DFD2] bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex-1"
+              className="group overflow-hidden rounded-3xl border border-earth-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex-1"
             >
               {/* Image */}
 
@@ -81,7 +81,7 @@ export default function SuccessStoriesSection() {
                 <div className="absolute left-5 top-5 rounded-full bg-white p-3 shadow-lg">
                   <Quote
                     size={22}
-                    className="text-[#C4711A]"
+                    className="text-secondary-700"
                   />
                 </div>
 
@@ -99,7 +99,7 @@ export default function SuccessStoriesSection() {
                     <Star
                       key={index}
                       size={18}
-                      className="fill-[#C4711A] text-[#C4711A]"
+                      className="fill-secondary-700 text-secondary-700"
                     />
                   ))}
 
@@ -107,7 +107,7 @@ export default function SuccessStoriesSection() {
 
                 {/* Review */}
 
-                <p className="leading-8 text-[#6B5B47] line-clamp-4">
+                <p className="leading-8 text-earth-600 line-clamp-4">
                   {story.review}
                 </p>
 
@@ -121,11 +121,11 @@ export default function SuccessStoriesSection() {
 
                   <div>
 
-                    <h4 className="font-bold text-[#1E3A2F]">
+                    <h4 className="font-bold text-primary-800">
                       {story.adopter}
                     </h4>
 
-                    <p className="text-sm text-[#8B7355]">
+                    <p className="text-sm text-earth-500">
                       {story.location}
                     </p>
 
@@ -133,11 +133,11 @@ export default function SuccessStoriesSection() {
 
                   <div className="text-right">
 
-                    <h5 className="font-semibold text-[#1E3A2F]">
+                    <h5 className="font-semibold text-primary-800">
                       {story.petName}
                     </h5>
 
-                    <p className="text-sm text-[#8B7355]">
+                    <p className="text-sm text-earth-500">
                       {story.breed}
                     </p>
 

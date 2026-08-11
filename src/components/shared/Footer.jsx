@@ -12,7 +12,7 @@ import { GrLocationPin } from "react-icons/gr";
 
 const Footer = () => {
     return (
-        <footer className="bg-[#1E3A2F] py-16">
+        <footer className="bg-primary-800 py-16">
             <div className="container mx-auto max-w-7xl px-6 mb-8">
                 <div className="flex flex-wrap">
                     {/* Company */}
@@ -30,7 +30,7 @@ const Footer = () => {
 
                     {/* Get Help */}
                     <div className="w-full px-4 mb-8 sm:w-1/2 lg:w-1/4">
-                        <h4 className="relative mb-3 text-lg font-semibold capitalize text-[#f0a855]">
+                        <h4 className="relative mb-3 text-lg font-semibold capitalize text-secondary-800">
                             Quick Links
                         </h4>
 
@@ -72,7 +72,7 @@ const Footer = () => {
 
                     {/* Contact */}
                     <div className="w-full px-4 mb-8 sm:w-1/2 lg:w-1/4">
-                        <h4 className="relative mb-3 text-lg font-semibold capitalize text-[#f0a855]">
+                        <h4 className="relative mb-3 text-lg font-semibold capitalize text-secondary-800">
                             Contract
                         </h4>
 
@@ -106,35 +106,35 @@ const Footer = () => {
 
                     {/* Social */}
                     <div className="w-full px-4 mb-8 sm:w-1/2 lg:w-1/4">
-                        <h4 className="relative mb-3 text-lg font-semibold capitalize text-[#f0a855]">
+                        <h4 className="relative mb-3 text-lg font-semibold capitalize text-secondary-800">
                             Follow Us
                         </h4>
 
                         <div className="flex gap-3">
                             <a
                                 href="#"
-                                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white transition-all duration-500 hover:bg-white hover:text-[#24262b]"
+                                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white transition-all duration-500 hover:bg-white hover:text-earth-900"
                             >
                                 <FaFacebookF />
                             </a>
 
                             <a
                                 href="#"
-                                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white transition-all duration-500 hover:bg-white hover:text-[#24262b]"
+                                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white transition-all duration-500 hover:bg-white hover:text-earth-900"
                             >
                                 <FaTwitter />
                             </a>
 
                             <a
                                 href="#"
-                                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white transition-all duration-500 hover:bg-white hover:text-[#24262b]"
+                                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white transition-all duration-500 hover:bg-white hover:text-earth-900"
                             >
                                 <FaInstagram />
                             </a>
 
                             <a
                                 href="#"
-                                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white transition-all duration-500 hover:bg-white hover:text-[#24262b]"
+                                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white transition-all duration-500 hover:bg-white hover:text-earth-900"
                             >
                                 <FaLinkedinIn />
                             </a>

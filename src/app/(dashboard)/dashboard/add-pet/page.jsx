@@ -1,11 +1,12 @@
 import AddPetForm from "@/components/utils/AddPetForm";
 
 
+
 const AddPetPage = () => {
 
 
     return (
-       <div className='bg-[#F7F2E8]'>
+       <div className='bg-secondary-100'>
             <AddPetForm/>
        </div> 
     );

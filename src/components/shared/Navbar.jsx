@@ -24,7 +24,7 @@ export default function Navbar() {
 
     return (
         <header className={`${dmSans.className} sticky top-0 z-50`}>
-            <nav className="relative overflow-hidden border-b border-white/10 bg-[#173328]/95 backdrop-blur-2xl">
+            <nav className="relative overflow-hidden border-b border-white/10 bg-primary-900/95 backdrop-blur-2xl">
 
                 {/* Decorative Glow */}
 
@@ -110,7 +110,7 @@ export default function Navbar() {
 
                                     <Link
                                         href="/sign-up"
-                                        className="hidden md:flex items-center gap-2 rounded-xl bg-[#C4711A] px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#E8892B]"
+                                        className="hidden md:flex items-center gap-2 rounded-xl bg-secondary-700 px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary-500"
                                     >
                                         <IoMdCreate size={18} />
                                         Sign Up
@@ -118,7 +118,7 @@ export default function Navbar() {
 
                                     <Link
                                         href="/sign-up"
-                                        className="btn btn-circle border-none bg-[#C4711A] text-white hover:bg-[#E8892B] md:hidden"
+                                        className="btn btn-circle border-none bg-secondary-700 text-white hover:bg-secondary-500 md:hidden"
                                     >
                                         <IoMdCreate />
                                     </Link>

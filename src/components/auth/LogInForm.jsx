@@ -76,17 +76,17 @@ export default function LoginForm() {
 
             {/* Card */}
 
-            <div className="rounded-[30px] border border-[#E6DED2] bg-white p-8 shadow-xl">
+            <div className="rounded-3xl border border-[#E6DED2] bg-white p-8 shadow-xl">
 
                 {/* Heading */}
 
                 <div className="mb-8 text-center">
 
-                    <h2 className="text-4xl font-bold text-[#1E3A2F]">
+                    <h2 className="text-4xl font-bold text-primary-800">
                         Welcome Back
                     </h2>
 
-                    <p className="mt-3 text-[#8B7355]">
+                    <p className="mt-3 text-earth-500">
                         Login to continue your adoption journey.
                     </p>
 
@@ -103,7 +103,7 @@ export default function LoginForm() {
 
                     <div>
 
-                        <label className="mb-2 block text-sm font-semibold text-[#1E3A2F]">
+                        <label className="mb-2 block text-sm font-semibold text-primary-800">
                             Email Address
                         </label>
 
@@ -111,14 +111,14 @@ export default function LoginForm() {
 
                             <Mail
                                 size={20}
-                                className="absolute left-4 top-1/2 -translate-y-1/2 text-[#8B7355]"
+                                className="absolute left-4 top-1/2 -translate-y-1/2 text-earth-500"
                             />
 
                             <input
                                 name="email"
                                 type="email"
                                 placeholder="Enter your email"
-                                className="h-14 w-full rounded-xl border border-[#DDD4C7] bg-[#FAF8F5] pl-12 pr-4 outline-none transition focus:border-[#1E3A2F]"
+                                className="h-14 w-full rounded-xl border border-earth-400 bg-earth-50 pl-12 pr-4 outline-none transition focus:border-primary-800"
                             />
 
                         </div>
@@ -135,7 +135,7 @@ export default function LoginForm() {
 
                     <div>
 
-                        <label className="mb-2 block text-sm font-semibold text-[#1E3A2F]">
+                        <label className="mb-2 block text-sm font-semibold text-primary-800">
                             Password
                         </label>
 
@@ -143,7 +143,7 @@ export default function LoginForm() {
 
                             <Lock
                                 size={20}
-                                className="absolute left-4 top-1/2 -translate-y-1/2 text-[#8B7355]"
+                                className="absolute left-4 top-1/2 -translate-y-1/2 text-earth-500"
                             />
 
                             <input
@@ -154,7 +154,7 @@ export default function LoginForm() {
                                         : "password"
                                 }
                                 placeholder="Enter your password"
-                                className="h-14 w-full rounded-xl border border-[#DDD4C7] bg-[#FAF8F5] px-12 outline-none transition focus:border-[#1E3A2F]"
+                                className="h-14 w-full rounded-xl border border-earth-400 bg-earth-50 px-12 outline-none transition focus:border-primary-800"
                             />
 
                             <button
@@ -162,7 +162,7 @@ export default function LoginForm() {
                                 onClick={() =>
                                     setShowPassword(!showPassword)
                                 }
-                                className="absolute right-4 top-1/2 -translate-y-1/2 text-[#8B7355]"
+                                className="absolute right-4 top-1/2 -translate-y-1/2 text-earth-500"
                             >
                                 {showPassword ? (
                                     <EyeOff size={20} />
@@ -189,10 +189,10 @@ export default function LoginForm() {
 
                             <input
                                 type="checkbox"
-                                className="checkbox checkbox-sm border-[#1E3A2F]"
+                                className="checkbox checkbox-sm border-primary-800"
                             />
 
-                            <span className="text-sm text-[#6B5B47]">
+                            <span className="text-sm text-earth-600">
                                 Remember me
                             </span>
 
@@ -200,7 +200,7 @@ export default function LoginForm() {
 
                         <Link
                             href="/forgot-password"
-                            className="text-sm font-semibold text-[#C4711A] hover:underline"
+                            className="text-sm font-semibold text-secondary-700 hover:underline"
                         >
                             Forgot Password?
                         </Link>
@@ -211,7 +211,7 @@ export default function LoginForm() {
 
                     <button
                         disabled={loading}
-                        className="flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-linear-to-r from-[#1E3A2F] via-[#2D5142] to-[#3D6B57] font-semibold text-white transition hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-60"
+                        className="flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-linear-to-r from-primary-800 via-[#2D5142] to-primary-500 font-semibold text-white transition hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-60"
                     >
                         {loading ? (
                             <>
@@ -232,19 +232,19 @@ export default function LoginForm() {
 
                 <div className="my-8 flex items-center">
 
-                    <div className="h-px flex-1 bg-[#E7DED2]" />
+                    <div className="h-px flex-1 bg-earth-400" />
 
-                    <span className="mx-4 text-sm text-[#8B7355]">
+                    <span className="mx-4 text-sm text-earth-500">
                         OR
                     </span>
 
-                    <div className="h-px flex-1 bg-[#E7DED2]" />
+                    <div className="h-px flex-1 bg-earth-400" />
 
                 </div>
 
                 {/* Social Login */}
 
-                <button className="flex h-14 w-full items-center justify-center gap-3 rounded-xl border border-[#DDD4C7] bg-white font-medium text-[#1E3A2F] transition hover:bg-[#F7F2E8]">
+                <button className="flex h-14 w-full items-center justify-center gap-3 rounded-xl border border-earth-400 bg-white font-medium text-primary-800 transition hover:bg-secondary-100">
                     <Image
                         src="https://www.svgrepo.com/show/475656/google-color.svg"
                         alt="Google"
@@ -258,13 +258,13 @@ export default function LoginForm() {
 
                 {/* Register */}
 
-                <p className="mt-8 text-center text-[#6B5B47]">
+                <p className="mt-8 text-center text-earth-600">
 
                     Dont have an account?
 
                     <Link
                         href="/register"
-                        className="ml-2 font-semibold text-[#C4711A]"
+                        className="ml-2 font-semibold text-secondary-700"
                     >
                         Create Account
                     </Link>

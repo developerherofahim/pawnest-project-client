@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { dmSans, playFairDisplay } from '@/lib/font';
 import HeroImageSection from '../utils/HeroImageSection';
 import { FaArrowRight, FaPaw } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Banner = () => {
 
@@ -66,7 +67,7 @@ const Banner = () => {
                         >
                             Rescue A Heart,
                             <br />
-                            <span className="italic text-[#E8892B]">
+                            <span className="italic text-secondary-500">
                                 Find Your Forever Friend
                             </span>
                         </h1>
@@ -97,10 +98,10 @@ const Banner = () => {
       group relative flex w-full items-center justify-center
       overflow-hidden rounded-2xl
 
-      bg-gradient-to-r
-      from-[#C4711A]
-      via-[#D98024]
-      to-[#E8892B]
+      bg-linear-to-r
+      from-secondary-700
+      via-secondary-600
+      to-secondary-500
 
       px-5 py-3
       sm:px-6 sm:py-3.5
@@ -113,17 +114,17 @@ const Banner = () => {
       font-semibold
       text-white
 
-      shadow-[0_10px_30px_rgba(232,137,43,.35)]
+      shadow-button
       transition-all
       duration-500
 
       hover:-translate-y-1
-      hover:shadow-[0_18px_40px_rgba(232,137,43,.45)]
+      hover:button-hover
       active:scale-95
     "
                             >
                                 {/* Shine */}
-                                <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+                                <span className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
 
                                 <span className="relative flex items-center gap-2 sm:gap-3">
                                     <FaPaw className="text-base sm:text-lg lg:text-xl transition-transform group-hover:rotate-12" />
@@ -135,9 +136,10 @@ const Banner = () => {
                             </button>
 
                             {/* Secondary Button */}
-                            <button
+                            <Link
+                            href="/all-pet"
                                 className="
-      group flex w-full items-center justify-center
+      group flex w-full items-center justify-center cursor-pointer
 
       rounded-2xl
       border border-white/40
@@ -160,9 +162,9 @@ const Banner = () => {
       duration-500
 
       hover:-translate-y-1
-      hover:border-[#E8892B]
+      hover:border-secondary-500
       hover:bg-white
-      hover:text-[#1E3A2F]
+      hover:text-primary-800
       hover:shadow-xl
 
       active:scale-95
@@ -173,7 +175,7 @@ const Banner = () => {
 
                                     <FaArrowRight className="transition-transform group-hover:translate-x-1" />
                                 </span>
-                            </button>
+                            </Link>
 
                         </div>
                         {/* Features */}
@@ -198,7 +200,7 @@ const Banner = () => {
                     {/* RIGHT */}
                     <div className="flex flex-1 w-full justify-center">
 
-                        <div className="w-full max-w-[320px] sm:max-w-[420px] md:max-w-[520px] lg:max-w-[650px]">
+                        <div className="w-full max-w-[320px] sm:max-w-105 md:max-w-130 lg:max-w-162.5">
                             <HeroImageSection />
                         </div>
 
