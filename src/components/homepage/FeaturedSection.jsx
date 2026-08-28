@@ -3,9 +3,21 @@ import PetCard from '../utils/PetCard';
 import cat from "../../assets/cat.jpg"
 import { dmSans, playFairDisplay } from '@/lib/font';
 import { getAllPets } from '@/lib/action';
+import { auth } from '@/lib/auth';
+import { headers } from 'next/headers';
 
-const FeaturedSection = async() => {
-    const pets = await getAllPets();
+const FeaturedSection = async () => {
+    const { token } = await auth.api.getToken({
+        headers: await headers()
+    })
+
+    const res = await fetch(`http://localhost:8000/pets`, {
+        headers: {
+            authorization: `Bearer ${token}`
+        }
+    })
+    const pets = await res.json();
+
     console.log(pets)
     return (
         <section className='bg-secondary-100'>
@@ -16,10 +28,10 @@ const FeaturedSection = async() => {
                 </div>
                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-15'>
                     {
-                        pets.filter((pet)=> pet.isFeatured)
-                        .map((pet)=>(
-                            <PetCard key={pet._id} pet={pet}></PetCard>
-                        ))
+                        pets.filter((pet) => pet.isFeatured)
+                            .map((pet) => (
+                                <PetCard key={pet._id} pet={pet}></PetCard>
+                            ))
                     }
                 </div>
             </div>

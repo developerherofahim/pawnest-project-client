@@ -1,10 +1,21 @@
 import PetCard from '@/components/utils/PetCard';
 import { getAllPets } from '@/lib/action';
+import { auth } from '@/lib/auth';
+import { headers } from 'next/headers';
 import React from 'react';
 
 const AllPetPage = async () => {
 
-   const pets = await getAllPets();
+    const { token } = await auth.api.getToken({
+        headers: await headers()
+    })
+
+    const res = await fetch(`http://localhost:8000/pets`,{
+        headers: {
+            authorization: `Bearer ${token}`
+        }
+    })
+    const pets = await res.json();
 
     console.log(pets);
 

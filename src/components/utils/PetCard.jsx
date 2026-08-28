@@ -23,8 +23,8 @@ export default function PetCard({pet}) {
             <div className="relative h-65 overflow-hidden">
 
                 <Image
-                    src={pet.image}
-                    alt={pet.name}
+                    src={pet.imageUrl}
+                    alt={pet.petName}
                     fill
                     className="object-cover transition duration-500 group-hover:scale-110"
                 />
@@ -36,31 +36,31 @@ export default function PetCard({pet}) {
 
                 {/* Status */}
                 <span className="absolute left-4 top-4 rounded-full bg-primary-800 px-3 py-1 text-sm font-semibold text-white shadow">
-                    Available
+                    {pet.adoptionStatus}
                 </span>
             </div>
 
             {/* Content */}
-            <div className="space-y-3 p-6">
+            <div className=" space-y-3 p-6">
 
                 {/* Heading */}
                 <div className={`text-primary-800 flex items-start justify-between`}>
                     <div>
                         <h3 className={`${playFairDisplay.className} text-2xl font-bold text-neutral-900`}>
-                            {pet.name}
+                            {pet.petName}
                         </h3>
 
                         <p className="text-earth-500 flex items-center justify-center gap-2">
                             <span className="text-sm">{pet.breed}</span>
                             <span className="text-xs"><GoDotFill /></span>
-                            <span className="text-sm">{pet.age}</span>
+                            <span className="text-sm">{pet.age.value} {pet.age.unit}</span>
                             <span className="text-xs"><GoDotFill /></span>
-                            <span className="text-sm">{pet.weight}</span>
+                            <span className="text-sm">{pet.weight.value} {pet.weight.unit}</span>
                         </p>
                     </div>
 
                     <span className="text-2xl font-bold text-secondary-700">
-                        {pet.price}
+                        ${pet.adoptionFee}
                     </span>
                 </div>
 

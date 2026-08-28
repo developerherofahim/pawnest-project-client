@@ -22,6 +22,7 @@ export default function Sidebar() {
   return (
     <aside
       className={cn(
+        "sticky top-0 left-0 bottom-0",
         "relative hidden h-auto shrink-0 flex-col",
         "border-r border-border/60",
         "bg-primary-900/95 backdrop-blur-xl",

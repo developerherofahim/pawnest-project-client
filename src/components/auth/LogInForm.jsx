@@ -68,8 +68,21 @@ export default function LoginForm() {
         }
 
         toast.success("Log In Successful");
-            router.push("/")
-    }
+        router.push("/")
+    };
+
+    const handleGoogleLogIn = async (data) => {
+        const { data: googleRes, error } = await authClient.signIn.social({
+            provider: "google",
+        });
+
+        if (error) {
+            console.error(error);
+            return;
+        }
+
+        console.log(data);
+    };
 
     return (
         <div className={`w-full max-w-md ${dmSans.className}`}>
@@ -244,7 +257,7 @@ export default function LoginForm() {
 
                 {/* Social Login */}
 
-                <button className="flex h-14 w-full items-center justify-center gap-3 rounded-xl border border-earth-400 bg-white font-medium text-primary-800 transition hover:bg-secondary-100">
+                <button onClick={handleGoogleLogIn} className="flex h-14 w-full items-center justify-center gap-3 rounded-xl border border-earth-400 bg-white font-medium text-primary-800 transition hover:bg-secondary-100">
                     <Image
                         src="https://www.svgrepo.com/show/475656/google-color.svg"
                         alt="Google"

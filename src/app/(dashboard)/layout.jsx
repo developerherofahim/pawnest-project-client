@@ -8,7 +8,7 @@ import Sidebar from "@/components/dashboard/Sidebar";
 export default function DashboardLayout({ children }) {
   return (
     <SidebarProvider>
-      <div className="flex min-h-screen bg-background">
+      <div className="flex min-h-screen bg-background sticky top-0 left-0 bottom-0">
         {/* ================================= */}
         {/* Desktop Sidebar */}
         {/* ================================= */}
