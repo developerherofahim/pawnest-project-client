@@ -6,15 +6,7 @@ import React from 'react';
 
 const AllPetPage = async () => {
 
-    const { token } = await auth.api.getToken({
-        headers: await headers()
-    })
-
-    const res = await fetch(`http://localhost:8000/pets`,{
-        headers: {
-            authorization: `Bearer ${token}`
-        }
-    })
+    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/pets`)
     const pets = await res.json();
 
     console.log(pets);

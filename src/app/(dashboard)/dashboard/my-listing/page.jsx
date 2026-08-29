@@ -25,7 +25,7 @@ const MyListings = async () => {
         headers: await headers()
     })
 
-    const res = await fetch(`http://localhost:8000/pets`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/pets`, {
         headers: {
             authorization: `Bearer ${token}`
         }

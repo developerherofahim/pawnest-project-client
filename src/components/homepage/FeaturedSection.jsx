@@ -7,15 +7,9 @@ import { auth } from '@/lib/auth';
 import { headers } from 'next/headers';
 
 const FeaturedSection = async () => {
-    const { token } = await auth.api.getToken({
-        headers: await headers()
-    })
+    
 
-    const res = await fetch(`http://localhost:8000/pets`, {
-        headers: {
-            authorization: `Bearer ${token}`
-        }
-    })
+    const res = await fetch(`http://localhost:8000/pets`)
     const pets = await res.json();
 
     console.log(pets)

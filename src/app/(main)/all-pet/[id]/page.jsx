@@ -27,7 +27,11 @@ const PetDetailsPage = async ({ params }) => {
 
     const { id } = await params;
 
-    const res1 = await fetch(`http://localhost:8000/adoption-requests`, {
+      const { token } = await auth.api.getToken({
+        headers: await headers()
+    })
+
+    const res1 = await fetch(`${process.env.NEXT_PUBLIC_URL}/adoption-requests`, {
         headers: {
             authorization: `Bearer ${token}`
         }
@@ -35,11 +39,9 @@ const PetDetailsPage = async ({ params }) => {
 
     const requests = await res1.json();
 
-    const { token } = await auth.api.getToken({
-        headers: await headers()
-    })
+  
 
-    const res2 = await fetch(`http://localhost:8000/pets/${id}`, {
+    const res2 = await fetch(`${process.env.NEXT_PUBLIC_URL}/pets/${id}`, {
         headers: {
             authorization: `Bearer ${token}`
         }

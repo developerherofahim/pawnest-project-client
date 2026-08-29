@@ -5,8 +5,7 @@ import Link from "next/link";
 import React from "react";
 
 const API_URL =
-    process.env.NEXT_PUBLIC_API_URL ||
-    "http://localhost:8000";
+    process.env.NEXT_PUBLIC_URL
 
 // ============================================
 // GET PETS
@@ -96,19 +95,19 @@ function StatusBadge({ status }) {
 // ============================================
 
 export default async function DashboardPage() {
-    
+
     const { token } = await auth.api.getToken({
         headers: await headers()
     })
 
-    const res1 = await fetch(`http://localhost:8000/pets`, {
+    const res1 = await fetch(`${process.env.NEXT_PUBLIC_URL}/pets`, {
         headers: {
             authorization: `Bearer ${token}`
         }
     })
     const pets = await res1.json();
 
-    const res2 = await fetch(`http://localhost:8000/adoption-requests`, {
+    const res2 = await fetch(`${process.env.NEXT_PUBLIC_URL}/adoption-requests`, {
         headers: {
             authorization: `Bearer ${token}`
         }

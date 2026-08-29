@@ -6,8 +6,7 @@ import { redirect } from "next/navigation";
 import React from "react";
 
 const API_URL =
-    process.env.NEXT_PUBLIC_API_URL ||
-    "http://localhost:8000";
+    process.env.NEXT_PUBLIC_URL
 
 async function getMyRequests(userId) {
 
@@ -15,7 +14,7 @@ async function getMyRequests(userId) {
         headers: await headers()
     })
 
-    const res = await fetch(`http://localhost:8000/adoption-requests`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/adoption-requests`, {
         headers: {
             authorization: `Bearer ${token}`
         }
@@ -38,7 +37,7 @@ async function getPet(petId) {
         const { token } = await auth.api.getToken({
             headers: await headers()
         })
-        
+
         const res = await fetch(
             `${API_URL}/pets/${petId}`,
             {

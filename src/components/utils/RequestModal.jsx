@@ -11,23 +11,25 @@ import {
 } from "lucide-react";
 import React, { useState } from "react";
 
-const API_URL = "http://localhost:8000";
+const API_URL = process.env.NEXT_PUBLIC_URL
 
-const getToken = async () => {
-    const { data, error } = await authClient.token();
 
-    if (error) {
-        console.error("Token error:", error);
-        return null;
-    }
-
-    return data?.token;
-};
 
 const RequestModal = ({ petId }) => {
     const [requests, setRequests] = useState([]);
     const [loading, setLoading] = useState(false);
     const [processingId, setProcessingId] = useState(null);
+
+    const getToken = async () => {
+        const { data, error } = await authClient.token();
+
+        if (error) {
+            console.error("Token error:", error);
+            return null;
+        }
+
+        return data?.token;
+    };
 
     // =========================
     // GET REQUESTS FOR PET
@@ -37,14 +39,14 @@ const RequestModal = ({ petId }) => {
         try {
             setLoading(true);
 
-            const token = getToken()
+            const token = await getToken()
 
             const response = await fetch(
-                `${API_URL}/adoption-requests/pet/${petId}`,{
-                    headers:{
-                        authorization: `Bearer ${token}`
-                    }
+                `${API_URL}/adoption-requests/pet/${petId}`, {
+                headers: {
+                    authorization: `Bearer ${token}`
                 }
+            }
             );
 
             const data = await response.json();

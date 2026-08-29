@@ -21,7 +21,7 @@ const PetListingCard = async ({ pet }) => {
         headers: await headers()
     })
 
-    const res = await fetch(`http://localhost:8000/adoption-requests`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/adoption-requests`, {
         headers: {
             authorization: `Bearer ${token}`
         }

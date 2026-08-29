@@ -70,7 +70,7 @@ const AdoptionCard = ({ pet, requests }) => {
             const token = await getToken();
 
             const response = await fetch(
-                "http://localhost:8000/adoption-requests",
+                `${process.env.NEXT_PUBLIC_URL}/adoption-requests`,
                 {
                     method: "POST",
                     headers: {
