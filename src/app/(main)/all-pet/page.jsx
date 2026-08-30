@@ -1,12 +1,13 @@
 import PetCard from '@/components/utils/PetCard';
-import { getAllPets } from '@/lib/action';
 import { auth } from '@/lib/auth';
 import { headers } from 'next/headers';
 import React from 'react';
 
 const AllPetPage = async () => {
 
-    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/pets`)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/pets`,{
+        cache:"no-store"
+    })
     const pets = await res.json();
 
     console.log(pets);

@@ -34,7 +34,8 @@ const PetDetailsPage = async ({ params }) => {
     const res1 = await fetch(`${process.env.NEXT_PUBLIC_URL}/adoption-requests`, {
         headers: {
             authorization: `Bearer ${token}`
-        }
+        },
+        cache:"no-store"
     })
 
     const requests = await res1.json();
@@ -44,7 +45,8 @@ const PetDetailsPage = async ({ params }) => {
     const res2 = await fetch(`${process.env.NEXT_PUBLIC_URL}/pets/${id}`, {
         headers: {
             authorization: `Bearer ${token}`
-        }
+        },
+        cache:"no-store"
     });
 
     console.log(token)

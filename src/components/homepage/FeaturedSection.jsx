@@ -2,14 +2,15 @@ import React from 'react';
 import PetCard from '../utils/PetCard';
 import cat from "../../assets/cat.jpg"
 import { dmSans, playFairDisplay } from '@/lib/font';
-import { getAllPets } from '@/lib/action';
 import { auth } from '@/lib/auth';
 import { headers } from 'next/headers';
 
 const FeaturedSection = async () => {
     
 
-    const res = await fetch(`http://localhost:8000/pets`)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/pets`,{
+        cache:'no-store'
+    })
     const pets = await res.json();
 
     console.log(pets)

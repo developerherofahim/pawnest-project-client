@@ -17,7 +17,8 @@ async function getMyRequests(userId) {
     const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/adoption-requests`, {
         headers: {
             authorization: `Bearer ${token}`
-        }
+        },
+        cache:"no-store"
     })
 
     const requests = await res.json();

@@ -103,14 +103,16 @@ export default async function DashboardPage() {
     const res1 = await fetch(`${process.env.NEXT_PUBLIC_URL}/pets`, {
         headers: {
             authorization: `Bearer ${token}`
-        }
+        },
+        cache:"no-store"
     })
     const pets = await res1.json();
 
     const res2 = await fetch(`${process.env.NEXT_PUBLIC_URL}/adoption-requests`, {
         headers: {
             authorization: `Bearer ${token}`
-        }
+        },
+        cache:"no-store"
     })
 
     const adoptionRequests = await res2.json()

@@ -100,9 +100,8 @@ export default function Navbar() {
 
                             <div
                                 className="
-                                    hidden
                                     items-center
-                                    gap-3
+                                    gap-2
                                     rounded-xl
                                     border
                                     border-white/20
@@ -117,7 +116,7 @@ export default function Navbar() {
                                     duration-300
                                     hover:border-white/40
                                     hover:bg-white/10
-                                    md:flex
+                                    flex
                                 "
                             >
 
@@ -165,9 +164,15 @@ export default function Navbar() {
 
                                 {/* User Name */}
 
-                                <span className="max-w-32 truncate">
-                                    {user?.name}
-                                </span>
+                                <div>
+                                    <span className="hidden max-w-32 font-medium">
+                                        {user?.name?.slice(0, 3)}
+                                        {user?.name && user.name.length > 3 ? "..." : ""}
+                                    </span>
+                                    <span className="hidden md:inline-flex max-w-32 font-medium">
+                                        {user?.name}
+                                    </span>
+                                </div>
 
 
                                 {/* Dropdown */}
@@ -179,50 +184,7 @@ export default function Navbar() {
 
                             {/* ================= Mobile Profile ================= */}
 
-                            <Link
-                                href="/profile"
-                                aria-label="View profile"
-                                className="
-                                    flex
-                                    h-10
-                                    w-10
-                                    items-center
-                                    justify-center
-                                    overflow-hidden
-                                    rounded-full
-                                    border
-                                    border-white/20
-                                    bg-white/5
-                                    text-white
-                                    backdrop-blur-md
-                                    transition-all
-                                    duration-300
-                                    hover:bg-white/10
-                                    md:hidden
-                                "
-                            >
 
-                                {user?.image ? (
-
-                                    <Image
-                                        src={user.image}
-                                        alt={`${user.name ?? "User"} profile`}
-                                        width={40}
-                                        height={40}
-                                        className="h-full w-full object-cover"
-                                    />
-
-                                ) : (
-
-                                    <span className="text-sm font-semibold">
-                                        {user?.name
-                                            ?.charAt(0)
-                                            ?.toUpperCase() ?? "U"}
-                                    </span>
-
-                                )}
-
-                            </Link>
 
                         </div>
 

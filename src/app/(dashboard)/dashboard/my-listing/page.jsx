@@ -9,7 +9,6 @@ import {
     Plus,
 } from "lucide-react";
 
-import { getAllPets } from "@/lib/action";
 import PetListingCard from "@/components/utils/PetListingCard";
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
@@ -28,7 +27,8 @@ const MyListings = async () => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/pets`, {
         headers: {
             authorization: `Bearer ${token}`
-        }
+        },
+        cache:"no-store"
     })
     const pets = await res.json();
 
