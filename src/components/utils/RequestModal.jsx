@@ -137,7 +137,8 @@ const RequestModal = ({ petId }) => {
         try {
             setProcessingId(requestId);
 
-            const token = getToken()
+            const token = await getToken()
+            console.log(token)
 
             console.log(
                 "Rejecting Request ID:",

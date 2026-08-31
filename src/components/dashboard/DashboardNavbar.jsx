@@ -4,34 +4,41 @@ import { usePathname } from "next/navigation";
 import {
   Bell,
   ChevronDown,
+  House,
   Menu,
   Search,
 } from "lucide-react";
 
 import { useSidebar } from "@/hooks/use-sidebar";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const pageTitles = {
   "/dashboard": {
     title: "Dashboard",
     description: "Overview of your pet adoption activity",
   },
+
   "/my-pets": {
     title: "My Pets",
     description: "Manage the pets you have listed",
   },
+
   "/add-pet": {
     title: "Add Pet",
     description: "Create a new pet listing",
   },
+
   "/requests": {
     title: "Adoption Requests",
     description: "Manage your adoption requests",
   },
+
   "/users": {
     title: "Users",
     description: "Manage platform users",
   },
+
   "/settings": {
     title: "Settings",
     description: "Manage your account preferences",
@@ -43,7 +50,7 @@ export default function DashboardNavbar() {
   const { toggleSidebar } = useSidebar();
 
   const currentPage = pageTitles[pathname] ?? {
-    title: "Dashboard",
+    title: "Home",
     description: "Manage your pet adoption platform",
   };
 
@@ -89,7 +96,7 @@ export default function DashboardNavbar() {
 
         <div className="min-w-0">
           <div className="flex items-center gap-2">
-            <h1 className="truncate text-base font-bold tracking-tight sm:text-lg text-white/80">
+            <h1 className="truncate text-base font-bold tracking-tight text-white/80 sm:text-lg">
               {currentPage.title}
             </h1>
 
@@ -108,7 +115,45 @@ export default function DashboardNavbar() {
           RIGHT SECTION
       ========================================================= */}
 
+
+
       <div className="flex items-center gap-1 sm:gap-2">
+
+        {/* =======================================================
+    GO TO HOMEPAGE
+======================================================= */}
+
+        <Link
+          href="/"
+          aria-label="Go to homepage"
+          className={cn(
+            "group flex h-10 items-center gap-2",
+            "rounded-xl",
+            "border border-white/10",
+            "bg-white/5",
+            "px-3",
+            "text-sm font-medium text-white/60",
+            "transition-all duration-200",
+            "hover:border-white/15",
+            "hover:bg-white/10",
+            "hover:text-white",
+            "active:scale-[0.98]",
+            "focus-visible:outline-none",
+            "focus-visible:ring-2",
+            "focus-visible:ring-primary-500/30"
+          )}
+        >
+          <House
+            className={cn(
+              "h-4 w-4",
+              "text-white/50",
+              "transition-colors duration-200",
+              "group-hover:text-white"
+            )}
+          />
+
+          <span className="hidden sm:inline">Home</span>
+        </Link>
         {/* =======================================================
             DESKTOP SEARCH
         ======================================================= */}
@@ -160,15 +205,12 @@ export default function DashboardNavbar() {
             ⌘ K
           </kbd>
         </button>
-        {/* =======================================================
-            DIVIDER
-        ======================================================= */}
+
+        {/* Divider */}
 
         <div className="mx-1 hidden h-7 w-px bg-border/70 sm:block" />
 
-        {/* =======================================================
-            NOTIFICATIONS
-        ======================================================= */}
+        {/* Notifications */}
 
         <button
           type="button"
@@ -206,15 +248,12 @@ export default function DashboardNavbar() {
           />
         </button>
 
-        {/* =======================================================
-            DIVIDER
-        ======================================================= */}
+        {/* Divider */}
 
         <div className="mx-1 h-7 w-px bg-border/70" />
 
-        {/* =======================================================
-            USER PROFILE
-        ======================================================= */}
+        {/* User Profile */}
+
         <button
           type="button"
           aria-label="Open user menu"
@@ -286,7 +325,6 @@ export default function DashboardNavbar() {
             )}
           />
         </button>
-
       </div>
     </header>
   );

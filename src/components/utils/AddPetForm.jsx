@@ -15,7 +15,7 @@ import {
     Surface,
     TextField,
 } from "@heroui/react";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "react-toastify";
 
@@ -460,6 +460,8 @@ const validatePetData = (data) => {
 const AddPetForm = () => {
     const [errors, setErrors] = useState({});
 
+    const router = useRouter();
+
     const [isSubmitting, setIsSubmitting] =
         useState(false);
 
@@ -578,6 +580,8 @@ const AddPetForm = () => {
     const { data: session } = authClient.useSession();
 
     const user = session?.user;
+
+
 
     /* =====================================================
        SUBMIT
@@ -722,13 +726,16 @@ const AddPetForm = () => {
 
             const token = await getToken();
 
+            console.log("TOKEN EXISTS:", !!token);
+            console.log("TOKEN LENGTH:", token?.length);
+
             const requestOptions = {
                 method: "POST",
 
                 headers: {
                     "Content-Type": "application/json",
                     Accept: "application/json",
-                    authorization: `Bearer ${token}`
+                    // authorization: `Bearer ${token}`
                 },
 
                 body: JSON.stringify(petData),
@@ -799,13 +806,12 @@ const AddPetForm = () => {
             );
 
             resetFormState(form);
-            redirect('/my-listing')
+            router.push('/dashboard/my-listing')
 
         } catch (error) {
-            console.error(
-                "Add pet error:",
-                error
-            );
+            console.error("ADD PET ERROR OBJECT:", error);
+            console.error("ADD PET ERROR MESSAGE:", error?.message);
+            console.error("ADD PET ERROR DIGEST:", error?.digest);
 
             toast.error(
                 error instanceof Error
@@ -820,7 +826,7 @@ const AddPetForm = () => {
 
 
 
-    
+
 
 
     /* =====================================================
