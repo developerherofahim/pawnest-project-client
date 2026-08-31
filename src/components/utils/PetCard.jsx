@@ -12,9 +12,9 @@ import {
 import { GoDotFill } from "react-icons/go";
 import { playFairDisplay } from "@/lib/font";
 
-export default function PetCard({pet}) {
+export default function PetCard({ pet }) {
 
-    
+
 
     return (
         <article className="group overflow-hidden h-full rounded-3xl border border-neutral-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
@@ -71,7 +71,7 @@ export default function PetCard({pet}) {
                 </div>
 
                 {/* Quick Info */}
-               
+
 
                 {/* Personality */}
 
@@ -101,9 +101,13 @@ export default function PetCard({pet}) {
                         View Details
                     </Link>
 
-                    <button className="flex-1 rounded-xl bg-primary-800 py-3 font-semibold text-secondary-100 transition hover:bg-emerald-700">
+                    <Link
+                        href={`/all-pet/${pet._id}`}
+                        className="flex-1 rounded-xl border-2 bg-primary-800 text-neutral-100 py-3 text-center font-semibold transition hover:bg-primary-600"
+
+                    >
                         Adopt Now →
-                    </button>
+                    </Link>
 
                 </div>
 
