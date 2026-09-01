@@ -4,6 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+export const metadata = {
+  title: "Dashboard | Pawnest",
+  description: "Overview of your pet adoption activity",
+};
+
 const API_URL =
     process.env.NEXT_PUBLIC_URL
 

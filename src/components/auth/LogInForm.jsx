@@ -80,8 +80,6 @@ export default function LoginForm() {
             console.error(error);
             return;
         }
-
-        console.log(data);
     };
 
     return (

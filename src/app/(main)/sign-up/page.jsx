@@ -1,7 +1,10 @@
-
-
 import SignUpForm from "@/components/auth/SignUpForm";
 import { dmSans } from "@/lib/font";
+
+export const metadata = {
+  title: "Sign Up | Pawnest",
+  description: "Sign Up to explore your loving pets.",
+};
 
 export default function SignUpPage() {
     return (

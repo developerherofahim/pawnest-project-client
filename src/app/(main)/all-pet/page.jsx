@@ -3,6 +3,11 @@ import { auth } from '@/lib/auth';
 import { headers } from 'next/headers';
 import React from 'react';
 
+export const metadata = {
+  title: "All Pets | Pawnest",
+  description: "A modern platform for finding and adopting loving pets.",
+};
+
 const AllPetPage = async () => {
 
     const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/pets`,{
@@ -10,7 +15,7 @@ const AllPetPage = async () => {
     })
     const pets = await res.json();
 
-    console.log(pets);
+    
 
     return (
         <section className='bg-secondary-100'>

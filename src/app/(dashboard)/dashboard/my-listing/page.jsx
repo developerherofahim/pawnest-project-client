@@ -13,6 +13,11 @@ import PetListingCard from "@/components/utils/PetListingCard";
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
 
+export const metadata = {
+  title: "My Listing | Pawnest",
+  description: "See your Listing and Give The Best Adoption Experience,"
+};
+
 const MyListings = async () => {
     const session = await auth.api.getSession({
         headers: await headers(),

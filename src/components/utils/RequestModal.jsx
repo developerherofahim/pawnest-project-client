@@ -79,10 +79,6 @@ const RequestModal = ({ petId }) => {
 
             const token = await getToken();
 
-            console.log(
-                "Approving Request ID:",
-                requestId
-            );
 
             const response = await fetch(
                 `${API_URL}/adoption-requests/${requestId}/approve`,
@@ -114,11 +110,6 @@ const RequestModal = ({ petId }) => {
                         : request
                 )
             );
-
-            console.log(
-                "Approve success:",
-                data
-            );
         } catch (error) {
             console.error(
                 "Approve error:",
@@ -138,12 +129,6 @@ const RequestModal = ({ petId }) => {
             setProcessingId(requestId);
 
             const token = await getToken()
-            console.log(token)
-
-            console.log(
-                "Rejecting Request ID:",
-                requestId
-            );
 
             const response = await fetch(
                 `${API_URL}/adoption-requests/${requestId}/reject`,
@@ -174,11 +159,6 @@ const RequestModal = ({ petId }) => {
                         }
                         : request
                 )
-            );
-
-            console.log(
-                "Reject success:",
-                data
             );
         } catch (error) {
             console.error(

@@ -112,7 +112,7 @@ export default function SignUpForm() {
             return toast.error(error.message);
         }
 
-        
+
         toast.success("Sign Up Successful");
         redirect('/log-in');
 
@@ -140,6 +140,18 @@ export default function SignUpForm() {
                                         : "",
         }));
     };
+
+    const handleGoogleLogIn = async (data) => {
+        const { data: googleRes, error } = await authClient.signIn.social({
+            provider: "google",
+        });
+
+        if (error) {
+            console.error(error);
+            return;
+        }
+    };
+
     return (
         <div className="w-full max-w-md">
 
@@ -397,7 +409,7 @@ export default function SignUpForm() {
 
                 {/* Social Login */}
 
-                <button className="flex h-14 w-full items-center justify-center gap-3 rounded-xl border border-earth-400 bg-white font-medium text-primary-800 transition hover:bg-secondary-100">
+                <button onClick={handleGoogleLogIn} className="flex h-14 w-full items-center justify-center gap-3 rounded-xl border border-earth-400 bg-white font-medium text-primary-800 transition hover:bg-secondary-100">
                     <Image
                         src="https://www.svgrepo.com/show/475656/google-color.svg"
                         alt="Google"

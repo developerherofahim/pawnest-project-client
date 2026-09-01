@@ -904,11 +904,6 @@ const EditModalContent = ({ pet }) => {
             adoptionStatus,
         };
 
-        console.log(
-            "PATCH /pets payload:",
-            petData
-        );
-
         /* =================================================
            PATCH REQUEST
         ================================================= */

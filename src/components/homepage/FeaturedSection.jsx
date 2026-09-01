@@ -13,7 +13,6 @@ const FeaturedSection = async () => {
     })
     const pets = await res.json();
 
-    console.log(pets)
     return (
         <section className='bg-secondary-100'>
             <div className='container mx-auto px-5 py-20'>

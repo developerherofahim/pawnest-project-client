@@ -5,6 +5,12 @@ import Image from "next/image";
 import { redirect } from "next/navigation";
 import React from "react";
 
+export const metadata = {
+  title: "My Request | Pawnest",
+  description: "See your Request Activity and track your adoption request progress."
+};
+
+
 const API_URL =
     process.env.NEXT_PUBLIC_URL
 

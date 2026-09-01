@@ -23,11 +23,35 @@ import AdoptionCard from "@/components/utils/AdoptionCard";
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
 
+// app/pets/[id]/page.js
+
+export async function generateMetadata({ params }) {
+    const { id } = await params;
+
+     const { token } = await auth.api.getToken({
+        headers: await headers()
+    })
+
+    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/pets/${id}`, {
+        headers: {
+            authorization: `Bearer ${token}`
+        },
+        cache: "no-store"
+    })
+
+    const pet = await res.json();
+
+    return {
+        title: `${pet.petName} | Pawnest`,
+        description: pet.description,
+    };
+}
+
 const PetDetailsPage = async ({ params }) => {
 
     const { id } = await params;
 
-      const { token } = await auth.api.getToken({
+    const { token } = await auth.api.getToken({
         headers: await headers()
     })
 
@@ -35,21 +59,21 @@ const PetDetailsPage = async ({ params }) => {
         headers: {
             authorization: `Bearer ${token}`
         },
-        cache:"no-store"
+        cache: "no-store"
     })
 
     const requests = await res1.json();
 
-  
+
 
     const res2 = await fetch(`${process.env.NEXT_PUBLIC_URL}/pets/${id}`, {
         headers: {
             authorization: `Bearer ${token}`
         },
-        cache:"no-store"
+        cache: "no-store"
     });
 
-    console.log(token)
+
 
     const pet = await res2.json();
 

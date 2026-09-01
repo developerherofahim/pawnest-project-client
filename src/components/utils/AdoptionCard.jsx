@@ -15,8 +15,6 @@ const AdoptionCard = ({ pet, requests }) => {
 
     const user = session?.user;
 
-    console.log(user);
-
     const [isSubmitting, setIsSubmitting] =
         useState(false);
 
@@ -94,8 +92,6 @@ const AdoptionCard = ({ pet, requests }) => {
 
             resetFormState(form);
 
-            console.log(data);
-
         } catch (error) {
             console.error(error);
             toast.error(error.message || "Failed to send adoption request");
@@ -105,10 +101,6 @@ const AdoptionCard = ({ pet, requests }) => {
             setIsSubmitting(false);
         }
     };
-
-
-
-    console.log(pet);
 
     return (
         <div className={`container mx-auto max-w-4xl ${dmSans.className}`}>

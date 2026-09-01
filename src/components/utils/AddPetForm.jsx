@@ -726,9 +726,6 @@ const AddPetForm = () => {
 
             const token = await getToken();
 
-            console.log("TOKEN EXISTS:", !!token);
-            console.log("TOKEN LENGTH:", token?.length);
-
             const requestOptions = {
                 method: "POST",
 
