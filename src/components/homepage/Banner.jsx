@@ -93,7 +93,8 @@ const Banner = () => {
                         <div className="mt-8 flex w-full flex-col gap-4 sm:flex-row lg:mt-10">
 
                             {/* Primary Button */}
-                            <button
+                            <Link
+                                href='/all-pet'
                                 className="
       group relative flex w-full items-center justify-center
       overflow-hidden rounded-2xl
@@ -133,7 +134,7 @@ const Banner = () => {
 
                                     <FaArrowRight className="transition-transform group-hover:translate-x-1" />
                                 </span>
-                            </button>
+                            </Link>
 
                             {/* Secondary Button */}
                             <Link
